@@ -1,0 +1,35 @@
+{
+  "name": "dinas-couture",
+  "version": "1.0.0",
+  "description": "A fashion website showcasing the latest trends and products.",
+  "main": "src/app.tsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "fashion",
+    "ecommerce",
+    "clothing",
+    "online store"
+  ],
+  "author": "ifeanyisolomon004-bit",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2"
+  },
+  "homepage": "https://yourwebsite.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifeanyisolomon004-bit/Solomon.git"
+  }
+}
