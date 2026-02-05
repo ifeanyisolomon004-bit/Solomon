@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Dashboard - Cyber Intelligence Desk</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg class="security-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="humanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:orange;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Head -->
+                    <circle cx="35" cy="25" r="8" fill="white" stroke="orange" stroke-width="1.5"/>
+                    <!-- Body -->
+                    <rect x="30" y="35" width="10" height="15" fill="white" stroke="orange" stroke-width="1.5" rx="2"/>
+                    <!-- Arms -->
+                    <line x1="30" y1="38" x2="20" y2="35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="40" y1="38" x2="50" y2="35" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Laptop Computer -->
+                    <rect x="50" y="30" width="25" height="18" fill="none" stroke="orange" stroke-width="1.5" rx="2"/>
+                    <!-- Laptop Screen -->
+                    <rect x="52" y="32" width="21" height="12" fill="url(#humanGradient)" rx="1"/>
+                    <!-- Screen lines (data/coding) -->
+                    <line x1="55" y1="36" x2="70" y2="36" stroke="white" stroke-width="0.8"/>
+                    <line x1="55" y1="39" x2="68" y2="39" stroke="white" stroke-width="0.8"/>
+                    <line x1="55" y1="42" x2="72" y2="42" stroke="white" stroke-width="0.8"/>
+                    <!-- Laptop Keyboard -->
+                    <rect x="50" y="48" width="25" height="2" fill="orange"/>
+                    <!-- Legs -->
+                    <line x1="32" y1="50" x2="30" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="38" y1="50" x2="40" y2="60" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Cyber Intelligence Desk
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="file-case.html">File a Case</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="header-content">
+                    <h1>Recovery Dashboard</h1>
+                    <p class="subtitle">Real-time statistics on our recovery efforts</p>
+                </div>
+                <div class="security-image">
+                    <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Shield Background -->
+                        <defs>
+                            <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#0052a3;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Main Shield -->
+                        <path d="M 60 10 L 95 30 L 95 70 Q 60 110 60 110 Q 25 70 25 70 L 25 30 Z" fill="url(#shieldGradient)" stroke="#fff" stroke-width="2"/>
+                        <!-- Lock Icon -->
+                        <rect x="45" y="55" width="30" height="25" rx="3" fill="none" stroke="#fff" stroke-width="2"/>
+                        <circle cx="60" cy="62" r="4" fill="#fff"/>
+                        <path d="M 55 62 L 55 72 L 65 72 L 65 62" stroke="#fff" stroke-width="2" fill="none"/>
+                        <!-- Checkmark -->
+                        <path d="M 50 50 L 55 55 L 70 40" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Key Statistics -->
+            <div class="stats-grid">
+                <div class="stat-box recovered">
+                    <div class="stat-icon">💵</div>
+                    <div class="stat-content">
+                        <h3>Total Recovered</h3>
+                        <p class="stat-value" id="totalRecovered">$50,240,500</p>
+                        <span class="stat-change">↑ +$2.5M this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-box lost">
+                    <div class="stat-icon">📉</div>
+                    <div class="stat-content">
+                        <h3>Total Loss Reported</h3>
+                        <p class="stat-value" id="totalLost">$85,600,300</p>
+                        <span class="stat-change">Cases under investigation</span>
+                    </div>
+                </div>
+
+                <div class="stat-box recovery-rate">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-content">
+                        <h3>Recovery Rate</h3>
+                        <p class="stat-value" id="recoveryRate">58.6%</p>
+                        <span class="stat-change">Of reported losses</span>
+                    </div>
+                </div>
+
+                <div class="stat-box cases">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-content">
+                        <h3>Cases Resolved</h3>
+                        <p class="stat-value" id="casesResolved">1,247</p>
+                        <span class="stat-change">Successful recoveries</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h2>Recovery vs Loss Trend (Last 12 Months)</h2>
+                    <canvas id="trendChart" width="400" height="200"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Top Scam Methods</h2>
+                    <div class="scam-methods">
+                        <div class="method-item">
+                            <span class="method-name">Fake Exchanges</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 35%;"></div>
+                            </div>
+                            <span class="method-count">432 cases</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-name">Phishing Attacks</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 28%;"></div>
+                            </div>
+                            <span class="method-count">346 cases</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-name">Pump & Dump Schemes</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 22%;"></div>
+                            </div>
+                            <span class="method-count">271 cases</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-name">Ponzi Schemes</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 15%;"></div>
+                            </div>
+                            <span class="method-count">198 cases</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Status Distribution -->
+            <div class="status-section">
+                <h2>Active Cases by Status</h2>
+                <div class="status-grid">
+                    <div class="status-card open">
+                        <h3>Open</h3>
+                        <p class="status-count">342</p>
+                        <span>New investigations</span>
+                    </div>
+                    <div class="status-card investigating">
+                        <h3>Investigating</h3>
+                        <p class="status-count">287</p>
+                        <span>Under review</span>
+                    </div>
+                    <div class="status-card legal">
+                        <h3>Legal Action</h3>
+                        <p class="status-count">125</p>
+                        <span>In court proceedings</span>
+                    </div>
+                    <div class="status-card recovered">
+                        <h3>Recovered</h3>
+                        <p class="status-count">1,247</p>
+                        <span>Successfully closed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Scammers List and Broker Reporting -->
+            <div class="scammers-section">
+                <h2>Most Reported Scam Companies</h2>
+
+                <div class="scammers-actions">
+                    <form id="reportBrokerForm" class="report-broker-form">
+                        <h3>Report a Broker</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="brokerName">Broker / Company Name *</label>
+                                <input type="text" id="brokerName" name="brokerName" required placeholder="e.g., FraudX Exchange">
+                            </div>
+                            <div class="form-group">
+                                <label for="brokerWebsite">Website (optional)</label>
+                                <input type="url" id="brokerWebsite" name="brokerWebsite" placeholder="https://example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="brokerDescription">Description *</label>
+                            <textarea id="brokerDescription" name="brokerDescription" required placeholder="Describe the suspicious activity or scam experience" rows="3"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reporterEmail">Your Email (we may contact you) *</label>
+                                <input type="email" id="reporterEmail" name="reporterEmail" required placeholder="your@email.com">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit Report</button>
+                        </div>
+                        <p class="help-text">Reports are recorded locally and an email draft will be opened to send the report to our team.</p>
+                    </form>
+                </div>
+
+                <table class="scammers-table">
+                    <thead>
+                        <tr>
+                            <th>Company Name</th>
+                            <th>Reports</th>
+                            <th>Total Reported Loss</th>
+                            <th>Avg Loss</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="scammersTableBody">
+                        <!-- Dynamically populated -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="dashboard-cta">
+                <h2>Have You Been Scammed?</h2>
+                <p>Report your case and join our recovery process today.</p>
+                <a href="file-case.html" class="btn btn-primary btn-large">File a Case</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Crypto Recovery. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File a Case - Cyber Intelligence Desk</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🛡️ Cyber Intelligence Desk</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="file-case.html" class="active">File a Case</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- File Case Section -->
+    <section class="file-case">
+        <div class="container">
+            <h1>File Your Complaint</h1>
+            <p class="subtitle">Help us recover your lost cryptocurrency by providing detailed information about your case.</p>
+
+            <div class="form-container">
+                <form id="caseForm" class="case-form">
+                    <!-- Personal Information Section -->
+                    <div class="form-section">
+                        <h2>Your Information</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(123) 456-7890">
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Select your country</option>
+                                    <option value="USA">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="France">France</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Incident Details Section -->
+                    <div class="form-section">
+                        <h2>Scam Details</h2>
+                        
+                        <div class="form-group">
+                            <label for="companyName">Name of Scam Company/Platform *</label>
+                            <input type="text" id="companyName" name="companyName" list="companiesList" required placeholder="e.g., BitVault Pro, CryptoEdge Trading">
+                            <datalist id="companiesList">
+                                <option value="BitVault Pro">
+                                <option value="CryptoEdge Trading">
+                                <option value="FastCoin Exchange">
+                                <option value="Elite Crypto Fund">
+                                <option value="Nexus Digital Assets">
+                            </datalist>
+                            <p class="help-text">Choose an existing broker from the list or type a new name to report it.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="scamType">Type of Scam *</label>
+                            <select id="scamType" name="scamType" required>
+                                <option value="">Select the type of scam</option>
+                                <option value="fake-exchange">Fake Exchange/Platform</option>
+                                <option value="phishing">Phishing Attack</option>
+                                <option value="pump-dump">Pump & Dump Scheme</option>
+                                <option value="ponzi">Ponzi Scheme</option>
+                                <option value="fake-wallet">Fake Wallet</option>
+                                <option value="investment-fraud">Investment Fraud</option>
+                                <option value="impersonation">Impersonation/Fake Identity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="amountLost">Amount Lost (USD) *</label>
+                                <input type="number" id="amountLost" name="amountLost" required placeholder="0.00" step="0.01" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="cryptocurrency">Cryptocurrency Type(s) *</label>
+                                    <select id="cryptocurrency" name="cryptocurrency" required multiple size="4">
+                                        <option value="Bitcoin">Bitcoin (BTC)</option>
+                                        <option value="Ethereum">Ethereum (ETH)</option>
+                                        <option value="USDT">Tether (USDT)</option>
+                                        <option value="USDC">USD Coin (USDC)</option>
+                                        <option value="BNB">Binance Coin (BNB)</option>
+                                        <option value="XRP">Ripple (XRP)</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <p class="help-text">Hold Ctrl (Windows) / Cmd (Mac) to select multiple cryptocurrencies.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfScam">Date of Scam *</label>
+                            <input type="date" id="dateOfScam" name="dateOfScam" required>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Description Section -->
+                    <div class="form-section">
+                        <h2>Detailed Description</h2>
+                        
+                        <div class="form-group">
+                            <label for="scamDescription">How Did the Scam Happen? *</label>
+                            <textarea id="scamDescription" name="scamDescription" required placeholder="Describe how you were scammed, including how you were contacted, what promises were made, etc." rows="6"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="evidence">Evidence & Documentation</label>
+                            <p class="help-text">Upload screenshots, transaction records, emails, or any other evidence</p>
+                            <input type="file" id="evidence" name="evidence" multiple accept=".pdf,.png,.jpg,.jpeg,.doc,.docx">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="walletAddress">Cryptocurrency Wallet Address(es)</label>
+                            <textarea id="walletAddress" name="walletAddress" placeholder="Paste any wallet addresses related to the scam" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Connect Wallet (optional)</label>
+                            <div class="wallet-connect">
+                                <button type="button" id="connectWalletBtn" class="btn">Connect Wallet</button>
+                                <button type="button" id="disconnectWalletBtn" class="btn" style="display:none">Disconnect Wallet</button>
+                                <span id="connectedAddress" class="wallet-address" style="margin-left:12px; font-weight:600;"></span>
+                                <p class="help-text">Connect a Web3 wallet (e.g., MetaMask). The connected address will be added to the "Cryptocurrency Wallet Address(es)" field.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Taken Section -->
+                    <div class="form-section">
+                        <h2>Actions Taken</h2>
+                        
+                        <div class="form-group checkbox-group">
+                            <label>Have you reported this to law enforcement? *</label>
+                            <div class="checkbox-options">
+                                <label><input type="radio" name="lawEnforcement" value="yes" required> Yes</label>
+                                <label><input type="radio" name="lawEnforcement" value="no"> No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reportDetails">Report Details (if applicable)</label>
+                            <input type="text" id="reportDetails" name="reportDetails" placeholder="Police report number, agency, etc.">
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="termsAgreed" name="termsAgreed" required>
+                                I agree to the Terms of Service and authorize Cyber Intelligence Desk to investigate my case
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Submit Your Case</button>
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-content">
+                        <h2>✓ Case Submitted Successfully</h2>
+                        <p>Your complaint has been received and assigned a case number.</p>
+                        <p><strong>Case Number: <span id="caseNumber"></span></strong></p>
+                        <p>You will receive a confirmation email shortly. Our team will begin the investigation process and contact you within 48 hours.</p>
+                        <p>Check the <a href="dashboard.html">Dashboard</a> to track your case progress.</p>
+                        <a href="index.html" class="btn btn-primary">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <h2>Important Information</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>📋 What to Include</h3>
+                        <ul>
+                            <li>Accurate personal information</li>
+                            <li>Exact amount lost in USD</li>
+                            <li>Complete details of the scam</li>
+                            <li>All supporting documentation</li>
+                            <li>Wallet addresses involved</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>⏱️ Timeline</h3>
+                        <ul>
+                            <li>1-2 hours: Initial review</li>
+                            <li>24-48 hours: Team contact</li>
+                            <li>7 days: Investigation begins</li>
+                            <li>30+ days: Legal action if applicable</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>🔒 Confidentiality</h3>
+                        <ul>
+                            <li>Your data is encrypted</li>
+                            <li>100% confidential process</li>
+                            <li>Legal privilege protection</li>
+                            <li>No information sharing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Cyber Intelligence Desk. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

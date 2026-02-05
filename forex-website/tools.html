@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Calculators - ForexPro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💱</span>
+                ForexPro
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trading.html">Trading</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tools.html" class="active">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Trading Tools & Calculators</h1>
+        <p>Professional tools to help you trade smarter</p>
+    </section>
+
+    <!-- Profit Calculator Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Profit Calculator</h2>
+            <div class="calculator-grid">
+                <div class="calculator-box">
+                    <h3>Calculate Your Profit/Loss</h3>
+                    <form class="calc-form" id="profitCalc">
+                        <div class="form-group">
+                            <label>Currency Pair</label>
+                            <select>
+                                <option>EUR/USD</option>
+                                <option>GBP/USD</option>
+                                <option>USD/JPY</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Trade Type</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="type" value="buy" checked> Buy</label>
+                                <label><input type="radio" name="type" value="sell"> Sell</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Volume (Lots)</label>
+                            <input type="number" value="1" step="0.01" min="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label>Entry Price</label>
+                            <input type="number" value="1.0820" step="0.0001">
+                        </div>
+                        <div class="form-group">
+                            <label>Exit Price</label>
+                            <input type="number" value="1.0850" step="0.0001">
+                        </div>
+                        <button type="button" class="btn-primary" onclick="calculateProfit()">Calculate</button>
+                    </form>
+                    <div id="profitResult" class="result-box" style="display:none;">
+                        <p>Profit/Loss: <span id="profitValue">$0.00</span></p>
+                        <p>Pips: <span id="pipsValue">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pip Calculator Section -->
+    <section class="content-section alternate">
+        <div class="container">
+            <h2>Pip Value Calculator</h2>
+            <div class="calculator-grid">
+                <div class="calculator-box">
+                    <h3>Calculate Pip Value</h3>
+                    <form class="calc-form" id="pipCalc">
+                        <div class="form-group">
+                            <label>Currency Pair</label>
+                            <select>
+                                <option>EUR/USD - 1 pip = $10 (1 lot)</option>
+                                <option>GBP/USD - 1 pip = $10 (1 lot)</option>
+                                <option>USD/JPY - 1 pip = $10 (1 lot)</option>
+                                <option>AUD/USD - 1 pip = $10 (1 lot)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Lot Size</label>
+                            <input type="number" value="1" step="0.01" min="0.01">
+                        </div>
+                        <button type="button" class="btn-primary" onclick="calculatePip()">Calculate</button>
+                    </form>
+                    <div id="pipResult" class="result-box" style="display:none;">
+                        <p>Pip Value: <span id="pipValueResult">$0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Calculator Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Risk Calculator</h2>
+            <div class="calculator-grid">
+                <div class="calculator-box">
+                    <h3>Manage Your Risk</h3>
+                    <form class="calc-form" id="riskCalc">
+                        <div class="form-group">
+                            <label>Account Balance ($)</label>
+                            <input type="number" value="10000" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Risk per Trade (%)</label>
+                            <input type="number" value="2" step="0.1" min="0.1" max="10">
+                        </div>
+                        <div class="form-group">
+                            <label>Entry Price</label>
+                            <input type="number" value="1.0820" step="0.0001">
+                        </div>
+                        <div class="form-group">
+                            <label>Stop Loss Price</label>
+                            <input type="number" value="1.0800" step="0.0001">
+                        </div>
+                        <button type="button" class="btn-primary" onclick="calculateRisk()">Calculate</button>
+                    </form>
+                    <div id="riskResult" class="result-box" style="display:none;">
+                        <p>Risk Amount: <span id="riskAmount">$0.00</span></p>
+                        <p>Position Size: <span id="positionSize">0 lots</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Margin Calculator Section -->
+    <section class="content-section alternate">
+        <div class="container">
+            <h2>Margin Calculator</h2>
+            <div class="calculator-grid">
+                <div class="calculator-box">
+                    <h3>Calculate Required Margin</h3>
+                    <form class="calc-form" id="marginCalc">
+                        <div class="form-group">
+                            <label>Currency Pair</label>
+                            <select>
+                                <option>EUR/USD</option>
+                                <option>GBP/USD</option>
+                                <option>USD/JPY</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Lot Size</label>
+                            <input type="number" value="1" step="0.01" min="0.01">
+                        </div>
+                        <div class="form-group">
+                            <label>Current Price</label>
+                            <input type="number" value="1.0845" step="0.0001">
+                        </div>
+                        <div class="form-group">
+                            <label>Leverage (1:X)</label>
+                            <select>
+                                <option>1:50</option>
+                                <option>1:100</option>
+                                <option>1:200</option>
+                                <option>1:500</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-primary" onclick="calculateMargin()">Calculate</button>
+                    </form>
+                    <div id="marginResult" class="result-box" style="display:none;">
+                        <p>Required Margin: <span id="marginValue">$0.00</span></p>
+                        <p>Free Margin Needed: <span id="freeMargin">$0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Tools Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>More Tools & Resources</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>📅 Economic Calendar</h3>
+                    <p>Track important economic events that impact currency markets</p>
+                    <button class="btn-secondary">View Calendar</button>
+                </div>
+                <div class="tool-card">
+                    <h3>📊 Currency Converter</h3>
+                    <p>Convert between different currencies with live rates</p>
+                    <button class="btn-secondary">Open Converter</button>
+                </div>
+                <div class="tool-card">
+                    <h3>🎯 Pivot Points Calculator</h3>
+                    <p>Calculate support and resistance levels for your trades</p>
+                    <button class="btn-secondary">Calculate Pivots</button>
+                </div>
+                <div class="tool-card">
+                    <h3>📈 Technical Indicators</h3>
+                    <p>Access advanced technical analysis tools and indicators</p>
+                    <button class="btn-secondary">View Indicators</button>
+                </div>
+                <div class="tool-card">
+                    <h3>💹 Correlation Matrix</h3>
+                    <p>Analyze correlations between different currency pairs</p>
+                    <button class="btn-secondary">View Correlations</button>
+                </div>
+                <div class="tool-card">
+                    <h3>📝 Trading Journal</h3>
+                    <p>Track and analyze all your trades in one place</p>
+                    <button class="btn-secondary">Open Journal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ForexPro</h4>
+                <p>Leading online forex trading platform with competitive spreads and professional tools.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="trading.html">Trading</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Risk Disclosure</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ support@forexpro.com</p>
+                <p>📍 123 Finance Ave, NYC, USA</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ForexPro. All rights reserved. | Forex trading involves risk.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

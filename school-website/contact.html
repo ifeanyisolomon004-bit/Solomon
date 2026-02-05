@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Solomon Academy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Solomon Academy</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Get in Touch</h1>
+        <p>We'd Love to Hear From You</p>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <div class="contact-icon">📍</div>
+                    <h3>Address</h3>
+                    <p>123 Education Lane</p>
+                    <p>City, State 12345</p>
+                    <p>Country</p>
+                </div>
+                <div class="contact-info-box">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>Main Office: +1 (555) 123-4567</p>
+                    <p>Admissions: +1 (555) 123-4568</p>
+                    <p>Office Hours: Mon-Fri, 8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="contact-info-box">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>General: info@solomonacademy.edu</p>
+                    <p>Admissions: admissions@solomonacademy.edu</p>
+                    <p>Support: support@solomonacademy.edu</p>
+                </div>
+                <div class="contact-info-box">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="content-section alternate">
+        <div class="container">
+            <div class="form-container">
+                <h2>Send us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a Subject</option>
+                            <option value="admissions">Admissions Inquiry</option>
+                            <option value="academics">Academic Questions</option>
+                            <option value="events">Events & Activities</option>
+                            <option value="facilities">Facilities Tour</option>
+                            <option value="feedback">General Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <label for="subscribe">Subscribe to our newsletter</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <p class="form-note">We'll get back to you as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Department Contacts</h2>
+            <div class="departments-grid">
+                <div class="dept-card">
+                    <h3>Admissions Office</h3>
+                    <p>Email: admissions@solomonacademy.edu</p>
+                    <p>Phone: +1 (555) 123-4568</p>
+                    <p>Contact for application, entrance exam, and enrollment queries.</p>
+                </div>
+                <div class="dept-card">
+                    <h3>Academic Office</h3>
+                    <p>Email: academics@solomonacademy.edu</p>
+                    <p>Phone: +1 (555) 123-4569</p>
+                    <p>Contact for curriculum, academics, and student performance matters.</p>
+                </div>
+                <div class="dept-card">
+                    <h3>Student Affairs</h3>
+                    <p>Email: studentaffairs@solomonacademy.edu</p>
+                    <p>Phone: +1 (555) 123-4570</p>
+                    <p>Contact for co-curricular activities, sports, and student welfare.</p>
+                </div>
+                <div class="dept-card">
+                    <h3>Finance Office</h3>
+                    <p>Email: finance@solomonacademy.edu</p>
+                    <p>Phone: +1 (555) 123-4571</p>
+                    <p>Contact for fee-related queries and financial assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+        <h2>Find Us</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890123!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjIiTiA3NMKwMDAnMjEuNiJX!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>What is the admission process?</h3>
+                    <p>The admission process involves application submission, entrance assessment, interview, and final admission decision. Detailed information is available on our Admissions page.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are the school timings?</h3>
+                    <p>School operates from 8:00 AM to 3:00 PM on weekdays. Extended care facilities are available until 5:00 PM for primary students.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer scholarships?</h3>
+                    <p>Yes, we offer merit-based and need-based scholarships to deserving students. Contact our admissions office for details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What transportation facilities are available?</h3>
+                    <p>We provide school buses covering various routes. A monthly transportation fee is charged. Details available at the office.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I visit the campus?</h3>
+                    <p>Yes, campus tours are organized for prospective parents and students. Please schedule in advance by contacting the admissions office.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What extracurricular activities are offered?</h3>
+                    <p>We offer sports, arts, music, drama, science clubs, and various other activities to develop well-rounded individuals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Solomon Academy</h4>
+                <p>Dedicated to providing quality education and developing responsible citizens.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Education Lane, City, State 12345</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ info@solomonacademy.edu</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Solomon Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

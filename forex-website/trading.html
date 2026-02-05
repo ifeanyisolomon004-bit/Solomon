@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading - ForexPro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💱</span>
+                ForexPro
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trading.html" class="active">Trading</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Trading Platform</h1>
+        <p>Professional tools and instruments for forex trading</p>
+    </section>
+
+    <!-- Trading Interface Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Available Trading Instruments</h2>
+            <div class="instruments-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="major">Major Pairs</button>
+                <button class="filter-btn" data-filter="minor">Minor Pairs</button>
+                <button class="filter-btn" data-filter="exotic">Exotic Pairs</button>
+            </div>
+            <div class="instruments-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pair</th>
+                            <th>Bid</th>
+                            <th>Ask</th>
+                            <th>Spread</th>
+                            <th>Change</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="major">
+                            <td>EUR/USD</td>
+                            <td>1.0843</td>
+                            <td>1.0845</td>
+                            <td>0.2 pips</td>
+                            <td class="positive">+0.15%</td>
+                            <td><button class="trade-btn">Trade</button></td>
+                        </tr>
+                        <tr class="major">
+                            <td>GBP/USD</td>
+                            <td>1.2748</td>
+                            <td>1.2750</td>
+                            <td>0.2 pips</td>
+                            <td class="positive">+0.22%</td>
+                            <td><button class="trade-btn">Trade</button></td>
+                        </tr>
+                        <tr class="major">
+                            <td>USD/JPY</td>
+                            <td>148.48</td>
+                            <td>148.50</td>
+                            <td>0.2 pips</td>
+                            <td class="negative">-0.10%</td>
+                            <td><button class="trade-btn">Trade</button></td>
+                        </tr>
+                        <tr class="minor">
+                            <td>EUR/GBP</td>
+                            <td>0.8508</td>
+                            <td>0.8510</td>
+                            <td>0.2 pips</td>
+                            <td class="negative">-0.05%</td>
+                            <td><button class="trade-btn">Trade</button></td>
+                        </tr>
+                        <tr class="exotic">
+                            <td>USD/TRY</td>
+                            <td>32.45</td>
+                            <td>32.50</td>
+                            <td>0.5 pips</td>
+                            <td class="positive">+0.30%</td>
+                            <td><button class="trade-btn">Trade</button></td>
+                        </tr>
+                        <tr class="exotic">
+                            <td>USD/ZAR</td>
+                            <td>18.75</td>
+                            <td>18.80</td>
+                            <td>0.5 pips</td>
+                            <td class="negative">-0.20%</td>
+                            <td><button class="trade-btn">Trade</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trading Strategies Section -->
+    <section class="content-section alternate">
+        <div class="container">
+            <h2>Popular Trading Strategies</h2>
+            <div class="strategies-grid">
+                <div class="strategy-card">
+                    <h3>Scalping</h3>
+                    <p>Make quick trades to profit from small price movements. Requires high volume and tight stops.</p>
+                    <ul>
+                        <li>Duration: Seconds to minutes</li>
+                        <li>Risk: High</li>
+                        <li>Skill Level: Advanced</li>
+                    </ul>
+                </div>
+                <div class="strategy-card">
+                    <h3>Day Trading</h3>
+                    <p>Open and close positions within a single trading day. Good for active traders.</p>
+                    <ul>
+                        <li>Duration: Minutes to hours</li>
+                        <li>Risk: Medium</li>
+                        <li>Skill Level: Intermediate</li>
+                    </ul>
+                </div>
+                <div class="strategy-card">
+                    <h3>Swing Trading</h3>
+                    <p>Hold positions for several days to capitalize on market swings and trends.</p>
+                    <ul>
+                        <li>Duration: Days to weeks</li>
+                        <li>Risk: Medium</li>
+                        <li>Skill Level: Intermediate</li>
+                    </ul>
+                </div>
+                <div class="strategy-card">
+                    <h3>Position Trading</h3>
+                    <p>Long-term strategy focusing on major market trends. Less time-intensive.</p>
+                    <ul>
+                        <li>Duration: Weeks to months</li>
+                        <li>Risk: Variable</li>
+                        <li>Skill Level: Beginner to Intermediate</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Tools Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Technical Analysis Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>📊 Charting Tools</h3>
+                    <p>Advanced charting with multiple timeframes and technical indicators including moving averages, RSI, MACD, Bollinger Bands, and more.</p>
+                </div>
+                <div class="tool-card">
+                    <h3>🎯 Economic Calendar</h3>
+                    <p>Stay informed about economic events that impact currency markets. Get real-time notifications and impact assessments.</p>
+                </div>
+                <div class="tool-card">
+                    <h3>🤖 Signals & Alerts</h3>
+                    <p>Receive automated trading signals and alerts based on technical indicators and market conditions.</p>
+                </div>
+                <div class="tool-card">
+                    <h3>📈 Market Analysis</h3>
+                    <p>Daily and weekly market reports from professional analysts with trading recommendations.</p>
+                </div>
+                <div class="tool-card">
+                    <h3>💡 Trade Ideas</h3>
+                    <p>Get curated trade ideas based on technical analysis and market sentiment.</p>
+                </div>
+                <div class="tool-card">
+                    <h3>⏰ News Feed</h3>
+                    <p>Real-time forex news and market updates to keep you informed of global events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Execution Types Section -->
+    <section class="content-section alternate">
+        <div class="container">
+            <h2>Order Types & Execution</h2>
+            <div class="order-types">
+                <div class="order-box">
+                    <h3>Market Order</h3>
+                    <p>Execute immediately at the current market price. Used for instant entry into a position.</p>
+                </div>
+                <div class="order-box">
+                    <h3>Limit Order</h3>
+                    <p>Execute only when the price reaches your specified level. Better control over entry price.</p>
+                </div>
+                <div class="order-box">
+                    <h3>Stop Order</h3>
+                    <p>Activate at a trigger price for risk management. Commonly used for stop losses.</p>
+                </div>
+                <div class="order-box">
+                    <h3>If-Touched (One Cancels Other)</h3>
+                    <p>Two related orders where execution of one automatically cancels the other.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Trading Platform Features</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <h4>MetaTrader 4 & 5</h4>
+                        <p>Industry-standard platforms with expert advisors and automated trading capabilities</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <h4>One-Click Trading</h4>
+                        <p>Quick execution with one-click trading functionality for speed and convenience</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <h4>Advanced Order Management</h4>
+                        <p>Full control over orders with trailing stops, take-profit levels, and risk management</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <h4>Trade Copying</h4>
+                        <p>Copy successful traders' strategies automatically and learn from their trading</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <h4>API Access</h4>
+                        <p>Connect your own trading algorithms with our robust REST API</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✓</span>
+                    <div>
+                        <h4>Mobile Apps</h4>
+                        <p>Trade on the go with native iOS and Android applications with full functionality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Trading?</h2>
+        <p>Join thousands of successful traders on ForexPro</p>
+        <button class="btn-primary btn-lg">Open Live Account</button>
+        <button class="btn-secondary btn-lg">Try Demo Account</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ForexPro</h4>
+                <p>Leading online forex trading platform with competitive spreads and professional tools.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="trading.html">Trading</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Risk Disclosure</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ support@forexpro.com</p>
+                <p>📍 123 Finance Ave, NYC, USA</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ForexPro. All rights reserved. | Forex trading involves risk.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

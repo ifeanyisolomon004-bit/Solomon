@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForexPro - Professional Forex Trading Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💱</span>
+                ForexPro
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="trading.html">Trading</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Trade Forex with Confidence</h1>
+            <p>Access global currency markets with competitive spreads and professional tools</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Start Trading Now</button>
+                <button class="btn-secondary">Demo Account</button>
+            </div>
+        </div>
+        <div class="hero-chart">
+            <div id="priceChart" class="chart-placeholder">
+                <canvas id="mainChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Overview Section -->
+    <section class="market-overview">
+        <h2>Live Market Rates</h2>
+        <div class="rates-grid">
+            <div class="rate-card" data-pair="EURUSD">
+                <div class="pair-name">EUR/USD</div>
+                <div class="pair-price" id="eurusd-price">1.0845</div>
+                <div class="pair-change positive" id="eurusd-change">+0.15%</div>
+                <div class="pair-time">Last update: Just now</div>
+            </div>
+            <div class="rate-card" data-pair="GBPUSD">
+                <div class="pair-name">GBP/USD</div>
+                <div class="pair-price" id="gbpusd-price">1.2750</div>
+                <div class="pair-change positive" id="gbpusd-change">+0.22%</div>
+                <div class="pair-time">Last update: Just now</div>
+            </div>
+            <div class="rate-card" data-pair="USDJPY">
+                <div class="pair-name">USD/JPY</div>
+                <div class="pair-price" id="usdjpy-price">148.50</div>
+                <div class="pair-change negative" id="usdjpy-change">-0.10%</div>
+                <div class="pair-time">Last update: Just now</div>
+            </div>
+            <div class="rate-card" data-pair="AUDUSD">
+                <div class="pair-name">AUD/USD</div>
+                <div class="pair-price" id="audusd-price">0.6580</div>
+                <div class="pair-change positive" id="audusd-change">+0.18%</div>
+                <div class="pair-time">Last update: Just now</div>
+            </div>
+            <div class="rate-card" data-pair="NZDUSD">
+                <div class="pair-name">NZD/USD</div>
+                <div class="pair-price" id="nzdusd-price">0.6020</div>
+                <div class="pair-change negative" id="nzdusd-change">-0.05%</div>
+                <div class="pair-time">Last update: Just now</div>
+            </div>
+            <div class="rate-card" data-pair="USDCAD">
+                <div class="pair-name">USD/CAD</div>
+                <div class="pair-price" id="usdcad-price">1.3620</div>
+                <div class="pair-change negative" id="usdcad-change">-0.12%</div>
+                <div class="pair-time">Last update: Just now</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose ForexPro</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Ultra-Low Spreads</h3>
+                <p>Spreads from 0.1 pips on major pairs with tight pricing</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Secure & Regulated</h3>
+                <p>Licensed broker with segregated accounts and insurance coverage</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Trading</h3>
+                <p>Trade on the go with our native iOS and Android apps</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Education Hub</h3>
+                <p>Comprehensive tutorials, webinars, and trading guides</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Multiple Deposits</h3>
+                <p>Fund your account via credit cards, bank transfers, and e-wallets</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>Advanced Tools</h3>
+                <p>Expert Advisors, risk calculators, and economic calendars</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Types Section -->
+    <section class="account-types">
+        <h2>Account Types</h2>
+        <div class="accounts-grid">
+            <div class="account-card">
+                <div class="account-badge">Popular</div>
+                <h3>Standard</h3>
+                <p class="account-desc">Perfect for beginners</p>
+                <ul class="account-features">
+                    <li>Minimum deposit: $100</li>
+                    <li>Leverage: Up to 1:500</li>
+                    <li>Spread from: 1.5 pips</li>
+                    <li>Commission: None</li>
+                    <li>24/5 Support</li>
+                </ul>
+                <button class="btn-primary">Open Account</button>
+            </div>
+            <div class="account-card featured">
+                <div class="account-badge">Best Value</div>
+                <h3>Professional</h3>
+                <p class="account-desc">For experienced traders</p>
+                <ul class="account-features">
+                    <li>Minimum deposit: $500</li>
+                    <li>Leverage: Up to 1:500</li>
+                    <li>Spread from: 0.5 pips</li>
+                    <li>Commission: $3/lot</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button class="btn-primary">Open Account</button>
+            </div>
+            <div class="account-card">
+                <div class="account-badge">Elite</div>
+                <h3>VIP Elite</h3>
+                <p class="account-desc">For high-volume traders</p>
+                <ul class="account-features">
+                    <li>Minimum deposit: $10,000</li>
+                    <li>Leverage: Up to 1:500</li>
+                    <li>Spread from: 0.1 pips</li>
+                    <li>Commission: $1/lot</li>
+                    <li>Dedicated Manager</li>
+                </ul>
+                <button class="btn-primary">Open Account</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="stats-container">
+            <div class="stat">
+                <h3>500K+</h3>
+                <p>Active Traders</p>
+            </div>
+            <div class="stat">
+                <h3>$50B+</h3>
+                <p>Daily Trading Volume</p>
+            </div>
+            <div class="stat">
+                <h3>24/5</h3>
+                <p>Market Hours</p>
+            </div>
+            <div class="stat">
+                <h3>50+</h3>
+                <p>Currency Pairs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How to Start Trading</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Create Account</h3>
+                <p>Sign up in minutes with your email address</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Verify Identity</h3>
+                <p>Complete KYC verification for security</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Fund Account</h3>
+                <p>Choose your preferred payment method</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Start Trading</h3>
+                <p>Begin placing trades with real or demo funds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Warning Section -->
+    <section class="risk-warning">
+        <div class="warning-content">
+            <h3>⚠️ Risk Disclosure</h3>
+            <p>Forex trading involves substantial risk of loss. It is not suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade, you should carefully consider your investment objectives, level of experience, and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose.</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <h2>Stay Updated on Market News</h2>
+        <p>Get daily market analysis, trading signals, and economic news</p>
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ForexPro</h4>
+                <p>Leading online forex trading platform with competitive spreads and professional tools.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="trading.html">Trading</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Risk Disclosure</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ support@forexpro.com</p>
+                <p>📍 123 Finance Ave, NYC, USA</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ForexPro. All rights reserved. | Forex trading involves risk.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Login</button>
+                <p class="form-link">Don't have an account? <a href="#">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

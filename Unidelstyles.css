@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: skyblue;
+    color: black;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: oldlace;
+     padding:10px 20px 10px 20px;
+}
+header h1{
+    font-size: 20px;
+}
+header nav a{
+    color: black;
+}
+.section-one{
+    text-align: center;
+padding: 10px 0 10px 0;
+}
+

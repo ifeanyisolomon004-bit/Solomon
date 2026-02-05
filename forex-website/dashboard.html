@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ForexPro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💱</span>
+                ForexPro
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trading.html">Trading</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Trading Dashboard</h1>
+        <p>Monitor your account and manage your positions</p>
+    </section>
+
+    <!-- Account Overview Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Account Overview</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Account Balance</h3>
+                    <div class="card-value">$25,000.00</div>
+                    <div class="card-label">Total Balance</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Equity</h3>
+                    <div class="card-value">$24,650.00</div>
+                    <div class="card-label">Current Equity</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Margin Used</h3>
+                    <div class="card-value">$8,200.00</div>
+                    <div class="card-label">Margin in Use</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Available Margin</h3>
+                    <div class="card-value">$16,450.00</div>
+                    <div class="card-label">Free Margin</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Profit/Loss</h3>
+                    <div class="card-value positive">+$650.00</div>
+                    <div class="card-label">+2.5% Today</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Margin Level</h3>
+                    <div class="card-value">300.6%</div>
+                    <div class="card-label">Account Health</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section class="content-section alternate">
+        <div class="container">
+            <h2>Open Positions</h2>
+            <div class="positions-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pair</th>
+                            <th>Type</th>
+                            <th>Volume</th>
+                            <th>Entry Price</th>
+                            <th>Current Price</th>
+                            <th>Pip</th>
+                            <th>Profit/Loss</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EUR/USD</td>
+                            <td>BUY</td>
+                            <td>1.0 lot</td>
+                            <td>1.0820</td>
+                            <td>1.0845</td>
+                            <td>+25</td>
+                            <td class="positive">+$250.00</td>
+                            <td><button class="close-btn">Close</button></td>
+                        </tr>
+                        <tr>
+                            <td>GBP/USD</td>
+                            <td>SELL</td>
+                            <td>0.5 lot</td>
+                            <td>1.2800</td>
+                            <td>1.2750</td>
+                            <td>+50</td>
+                            <td class="positive">+$250.00</td>
+                            <td><button class="close-btn">Close</button></td>
+                        </tr>
+                        <tr>
+                            <td>USD/JPY</td>
+                            <td>BUY</td>
+                            <td>2.0 lots</td>
+                            <td>148.75</td>
+                            <td>148.50</td>
+                            <td>-25</td>
+                            <td class="negative">-$500.00</td>
+                            <td><button class="close-btn">Close</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Trades Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Recent Closed Trades</h2>
+            <div class="trades-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date/Time</th>
+                            <th>Pair</th>
+                            <th>Type</th>
+                            <th>Entry</th>
+                            <th>Exit</th>
+                            <th>Pips</th>
+                            <th>Profit/Loss</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan 27, 10:45 AM</td>
+                            <td>EUR/USD</td>
+                            <td>BUY</td>
+                            <td>1.0800</td>
+                            <td>1.0835</td>
+                            <td>+35</td>
+                            <td class="positive">+$350.00</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 27, 9:15 AM</td>
+                            <td>AUD/USD</td>
+                            <td>SELL</td>
+                            <td>0.6600</td>
+                            <td>0.6580</td>
+                            <td>+20</td>
+                            <td class="positive">+$200.00</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 26, 3:20 PM</td>
+                            <td>GBP/USD</td>
+                            <td>BUY</td>
+                            <td>1.2750</td>
+                            <td>1.2720</td>
+                            <td>-30</td>
+                            <td class="negative">-$300.00</td>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 26, 1:10 PM</td>
+                            <td>USD/CAD</td>
+                            <td>BUY</td>
+                            <td>1.3600</td>
+                            <td>1.3645</td>
+                            <td>+45</td>
+                            <td class="positive">+$450.00</td>
+                            <td>Closed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Statistics Section -->
+    <section class="content-section alternate">
+        <div class="container">
+            <h2>Trading Performance</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Trades</h3>
+                    <div class="stat-value">127</div>
+                    <p>Since account opening</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Win Rate</h3>
+                    <div class="stat-value">62.5%</div>
+                    <p>78 wins / 49 losses</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Profit Factor</h3>
+                    <div class="stat-value">2.45</div>
+                    <p>Gross profit / Gross loss</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Average Trade</h3>
+                    <div class="stat-value">+$51.50</div>
+                    <p>Per trade profit/loss</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Max Drawdown</h3>
+                    <div class="stat-value">-8.5%</div>
+                    <p>Largest peak-to-trough decline</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Sharpe Ratio</h3>
+                    <div class="stat-value">1.82</div>
+                    <p>Risk-adjusted return metric</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deposits & Withdrawals Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Funds Management</h2>
+            <div class="funds-grid">
+                <div class="fund-card">
+                    <h3>💰 Make a Deposit</h3>
+                    <p>Add funds to your trading account via various payment methods</p>
+                    <button class="btn-primary">Deposit</button>
+                </div>
+                <div class="fund-card">
+                    <h3>💸 Request Withdrawal</h3>
+                    <p>Withdraw your profits or funds from your account</p>
+                    <button class="btn-secondary">Withdraw</button>
+                </div>
+                <div class="fund-card">
+                    <h3>📊 Transaction History</h3>
+                    <p>View all deposits, withdrawals, and account transactions</p>
+                    <button class="btn-secondary">View History</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section class="content-section alternate">
+        <div class="container">
+            <h2>Quick Actions</h2>
+            <div class="actions-grid">
+                <div class="action-btn">
+                    <div class="action-icon">📈</div>
+                    <span>New Trade</span>
+                </div>
+                <div class="action-btn">
+                    <div class="action-icon">📊</div>
+                    <span>View Reports</span>
+                </div>
+                <div class="action-btn">
+                    <div class="action-icon">⚙️</div>
+                    <span>Settings</span>
+                </div>
+                <div class="action-btn">
+                    <div class="action-icon">👤</div>
+                    <span>Profile</span>
+                </div>
+                <div class="action-btn">
+                    <div class="action-icon">🔔</div>
+                    <span>Notifications</span>
+                </div>
+                <div class="action-btn">
+                    <div class="action-icon">💬</div>
+                    <span>Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ForexPro</h4>
+                <p>Leading online forex trading platform with competitive spreads and professional tools.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="trading.html">Trading</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Risk Disclosure</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ support@forexpro.com</p>
+                <p>📍 123 Finance Ave, NYC, USA</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ForexPro. All rights reserved. | Forex trading involves risk.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
